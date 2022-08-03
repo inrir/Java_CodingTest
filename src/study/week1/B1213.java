@@ -40,7 +40,9 @@ public class B1213 {
                     ans += ((char)(i+'A'));
                 }
             }
-            String rev = new StringBuffer(ans).reverse().toString(); // 문자열 역순 만들기(펠리드룸을 위해서)
+            String rev = new StringBuffer(ans).reverse().toString();
+            // 문자열 역순 만들기(펠리드룸을 위해서) -> 시간이 더 느려진다. reverse 함수 시간 복잡도는 모르지만
+            // for 보다 더 느려진다.
             if(odd == 1) ans += ((char)(midIdx+'A')); // 한개만 있는 거 넣어주기
             System.out.println(ans + rev); // 마지막으로 뒷 부분 추가
         }
